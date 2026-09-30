@@ -1,3 +1,12 @@
+<?php
+    session_start();
+
+    include "../config/database.php";
+    //only admin can access this page
+    if (!isset($_SESSION["role"])|| $_SESSION["role"] != "student"){
+        header("Location: ./index.php");
+        exit();
+    } ?>
 <!doctype html>
 <html lang="en">
     <head>

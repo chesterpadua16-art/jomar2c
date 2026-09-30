@@ -43,6 +43,7 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-dark bg-dark">
         <div class="container">
+            <a href= "student/index.php" class= "btn btn btn-primary-sm"></a>
 
             <span class="navbar-brand">
                 Student Portal Admin
@@ -53,8 +54,10 @@
                 href="../logout.php"
             >
                 Logout
-            </a>
+</a>
+            
 
+            
         </div>
     </nav>
 

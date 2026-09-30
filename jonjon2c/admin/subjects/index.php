@@ -110,17 +110,20 @@
 
                             <td>
                                 <a
-                                    href="subject_form.html"
                                     class="btn btn-warning btn-sm"
+                                    href="delete.php?id=<?php echo $row['id'];?>"
                                 >
                                     Edit
                                 </a>
 
-                                <button
+                                <a
                                     class="btn btn-danger btn-sm"
+                                    href="delete.php?id=<?php echo $row['id'];?>"
+                                    onclick ="return conifrm('Are you sure you want to delete this record?')"
+                                    
                                 >
                                     Delete
-                                </button>
+                                </a>
                             </td>
                         </tr>
                         <?php } ?>

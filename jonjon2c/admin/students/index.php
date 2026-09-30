@@ -3,7 +3,7 @@
     include "../../config/database.php";
     //only admin can access this page
     if (!isset($_SESSION["role"])|| $_SESSION["role"] != "admin"){
-        header("Location: ../../index.php");
+        header("Location: ../index.php");
         exit();
     }
     $sql = "SELECT * FROM users
@@ -118,16 +118,18 @@
 
                                 <a
                                     class="btn btn-warning btn-sm"
-                                    href="student_form.php"
+                                    href="edit.php?id=<?php echo $row['id'];?>"
                                 >
                                     Edit
                                 </a>
 
-                                <button
+                                <a
                                     class="btn btn-danger btn-sm"
+                                    href="delete.php?id=<?php echo $row['id'];?>"
+                                    onclick="return confirm('Are you sure you want to delete this record?')"
                                 >
                                     Delete
-                                </button>
+                                </a>
                             </td>
                         </tr>
                         <?php } ?>
